@@ -13,10 +13,11 @@
     "require-dev": {
         "php": "^8.1",
         "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
-        "onepix/wordpress-stubs-generator": "^1.1",
+        "onepix/wordpress-stubs-generator": "*",
         "phpdocumentor/reflection-docblock": "^5.6",
         "phpunit/phpunit": "^9.6",
-        "phpstan/phpstan": "^1.10"
+        "phpstan/phpstan": "^1.10",
+        "onepix/wordpress-hooks-stub-generator": "*"
     },
     "minimum-stability": "stable",
     "autoload-dev": {
@@ -41,10 +42,10 @@
         "test": [
             "@test:phpunit",
             "@test:phpstan",
-            "@test:cs"
+            "@cs"
         ],
-        "test:cs": "phpcs",
-        "test:cs:fix": "phpcbf",
+        "cs": "php-cs-fixer fix --verbose --dry-run",
+        "cs:fix": "php-cs-fixer fix",
         "test:phpstan": "phpstan analyze",
         "test:phpunit": "phpunit",
         "generate": "bash ./generate.sh"
