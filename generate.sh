@@ -5,7 +5,7 @@
 
 HEADER=$'/**\n * Generated stub declarations for dokan.\n * @see https://dokan.co\n * @see https://github.com/0zd0/dokan-stubs\n */'
 
-FILE="dokan-stubs.php"
+FILE="dokan-stubs.phpstub"
 DIR=$(dirname "$0")
 
 IGNORE_HOOKS=(
